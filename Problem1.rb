@@ -3,9 +3,14 @@ class Problem1
 	def findSum
 		total = 0
 		(1...1000).each do |number|
-			if number % 5 == 0
+			# if number % 5 == 0
+			# 	total += number
+			# elsif number % 3 == 0
+			# 	total += number
+			# end
+			if dividendEvenlyDivisibleByDivisor(number, 5)
 				total += number
-			elsif number % 3 == 0
+			elsif dividendEvenlyDivisibleByDivisor(number, 3)
 				total += number
 			end
 		end
